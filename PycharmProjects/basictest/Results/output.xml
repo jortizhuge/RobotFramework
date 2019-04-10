@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20190408 16:51:43.591" generator="Robot 3.1.1 (Python 2.7.10 on darwin)">
+<suite source="/Users/jortiz/PycharmProjects/basictest/tests/project.robot" id="s1" name="Project">
+<test id="s1-t1" name="User can open a page in Chrome">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20190408 16:51:43.912" level="INFO">Opening browser 'Chrome' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" endtime="20190408 16:51:57.384" starttime="20190408 16:51:43.912"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>Yorch</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190408 16:52:03.639" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190408 16:52:03.639" starttime="20190408 16:52:02.559"></status>
+</kw>
+<msg timestamp="20190408 16:52:03.642" level="FAIL">Text 'Yorch' did not appear in 5 seconds.</msg>
+<status status="FAIL" endtime="20190408 16:52:03.642" starttime="20190408 16:51:57.385"></status>
+</kw>
+<doc>I can open the page in Chrome and see the tagline</doc>
+<status status="FAIL" endtime="20190408 16:52:03.642" critical="yes" starttime="20190408 16:51:43.911">Text 'Yorch' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-t2" name="User can open a page in Firefox">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://automationpractice.com/index.php Firefox</arg>
+</arguments>
+<msg timestamp="20190408 16:52:03.646" level="INFO">Opening browser 'firefox' to base url 'http://automationpractice.com/index.php Firefox'.</msg>
+<status status="PASS" endtime="20190408 16:52:09.623" starttime="20190408 16:52:03.646"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20190408 16:52:10.519" starttime="20190408 16:52:09.626"></status>
+</kw>
+<doc>I can open the page in Firefox</doc>
+<status status="PASS" endtime="20190408 16:52:10.519" critical="yes" starttime="20190408 16:52:03.644"></status>
+</test>
+<test id="s1-t3" name="User can login">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://automationpractice.com/index.php?controller=authentication&amp;back=my-account Chrome</arg>
+</arguments>
+<msg timestamp="20190408 16:52:10.522" level="INFO">Opening browser 'firefox' to base url 'http://automationpractice.com/index.php?controller=authentication&amp;back=my-account Chrome'.</msg>
+<status status="PASS" endtime="20190408 16:52:24.344" starttime="20190408 16:52:10.521"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:email</arg>
+<arg>ojuandaniel@gmail.com</arg>
+</arguments>
+<msg timestamp="20190408 16:52:24.346" level="INFO">Typing text 'ojuandaniel@gmail.com' into text field 'id:email'.</msg>
+<status status="PASS" endtime="20190408 16:52:24.560" starttime="20190408 16:52:24.345"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id:passwd</arg>
+<arg>12345</arg>
+</arguments>
+<msg timestamp="20190408 16:52:24.561" level="INFO">Typing text '12345' into text field 'id:passwd'.</msg>
+<status status="PASS" endtime="20190408 16:52:24.756" starttime="20190408 16:52:24.561"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>id:authentication</arg>
+</arguments>
+<msg timestamp="20190408 16:52:24.757" level="INFO">Clicking element 'id:authentication'.</msg>
+<status status="PASS" endtime="20190408 16:52:25.036" starttime="20190408 16:52:24.756"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20190408 16:52:26.029" starttime="20190408 16:52:25.037"></status>
+</kw>
+<doc>I can valid login</doc>
+<status status="PASS" endtime="20190408 16:52:26.030" critical="yes" starttime="20190408 16:52:10.520"></status>
+</test>
+<doc>This is a basic test</doc>
+<status status="FAIL" endtime="20190408 16:52:26.032" starttime="20190408 16:51:43.593"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="2">Critical Tests</stat>
+<stat fail="1" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Project" pass="2">Project</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
